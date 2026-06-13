@@ -1,0 +1,42 @@
+# dependências
+/node_modules
+
+# build / saída
+/.next/
+/out/
+/build
+/dist
+
+# logs
+*.log
+.dev.log
+
+# segredos / ambiente (nunca versionar valores reais)
+.env
+.env.*
+!.env.example
+*.local
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+*.keystore
+credentials*.json
+service-account*.json
+*secret*.json
+*.sqlite
+*.db
+
+# deploy / ferramentas locais
+/.vercel
+/.claude
+/.agents
+
+# sistema
+.DS_Store
+Thumbs.db
+
+# typescript
+next-env.d.ts
+*.tsbuildinfo

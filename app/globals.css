@@ -1,0 +1,161 @@
+@import "leaflet/dist/leaflet.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 99%;
+    --foreground: 222 47% 6%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 6%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 6%;
+
+    --brand: 355 84% 45%;
+    --brand-foreground: 0 0% 100%;
+    --brand-dark: 355 86% 37%;
+
+    --ink: 222 30% 8%;
+    --ink-surface: 222 22% 12%;
+
+    --primary: 222 30% 8%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 30% 96%;
+    --secondary-foreground: 222 30% 12%;
+
+    --muted: 214 28% 95%;
+    --muted-foreground: 215 16% 42%;
+
+    --accent: 355 84% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 48%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 25% 90%;
+    --input: 214 25% 88%;
+    --ring: 355 84% 45%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222 32% 7%;
+    --foreground: 210 30% 96%;
+
+    --card: 222 26% 10%;
+    --card-foreground: 210 30% 96%;
+
+    --popover: 222 26% 10%;
+    --popover-foreground: 210 30% 96%;
+
+    --brand: 355 86% 56%;
+    --brand-foreground: 0 0% 100%;
+    --brand-dark: 355 84% 46%;
+
+    --ink: 222 30% 8%;
+    --ink-surface: 222 22% 12%;
+
+    --primary: 210 30% 96%;
+    --primary-foreground: 222 30% 8%;
+
+    --secondary: 222 20% 16%;
+    --secondary-foreground: 210 30% 96%;
+
+    --muted: 222 18% 18%;
+    --muted-foreground: 215 18% 65%;
+
+    --accent: 355 86% 56%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 70% 52%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 222 16% 22%;
+    --input: 222 16% 22%;
+    --ring: 355 86% 56%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  ::selection {
+    @apply bg-brand text-brand-foreground;
+  }
+}
+
+@layer utilities {
+  .container-tight {
+    @apply mx-auto w-full max-w-6xl px-6;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .marquee-mask {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 8%,
+      black 92%,
+      transparent
+    );
+  }
+  .bg-grid {
+    background-image: linear-gradient(
+        to right,
+        hsl(var(--border) / 0.6) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, hsl(var(--border) / 0.6) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+}
+
+/* Pause marquee on hover of the track wrapper */
+.marquee-track:hover .marquee-anim {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-anim {
+    animation: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Leaflet tweaks to match the design */
+.leaflet-container {
+  font-family: var(--font-open-sans), system-ui, sans-serif;
+  background: hsl(var(--muted));
+}
+.leaflet-popup-content-wrapper {
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 30px -10px rgb(0 0 0 / 0.35);
+}
+.leaflet-bar a {
+  color: hsl(var(--foreground));
+}
