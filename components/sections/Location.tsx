@@ -21,7 +21,7 @@ export function Location() {
         <Reveal className="mt-14">
           <div className="grid overflow-hidden rounded-3xl border border-border bg-card shadow-xl lg:grid-cols-[1fr_0.9fr]">
             {/* Mapa */}
-            <div className="relative min-h-[320px] lg:min-h-[460px]">
+            <div className="relative isolate z-0 min-h-[320px] lg:min-h-[460px]">
               <LocationMap />
             </div>
 

@@ -28,6 +28,7 @@ export function SectionHeading({
         <span className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-brand">
           <span className="h-px w-6 bg-brand" />
           {eyebrow}
+          {align === "center" && <span className="h-px w-6 bg-brand" />}
         </span>
       )}
       <h2 className="mt-4 font-heading text-3xl font-bold tracking-tight text-balance sm:text-4xl">

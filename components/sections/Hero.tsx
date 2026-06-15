@@ -112,7 +112,19 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
           className="relative"
         >
-          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-8 backdrop-blur-md shadow-2xl">
+          <motion.div
+            animate={reduce ? undefined : { y: [0, -14, 0] }}
+            transition={
+              reduce
+                ? undefined
+                : {
+                    duration: 4.5,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }
+            }
+            className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-8 backdrop-blur-md shadow-2xl"
+          >
             <div
               aria-hidden
               className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-brand/30 blur-3xl"
@@ -142,7 +154,7 @@ export function Hero() {
                 <p className="text-xs text-white/65">foco em qualidade</p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

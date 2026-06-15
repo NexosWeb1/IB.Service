@@ -133,11 +133,6 @@
   }
 }
 
-/* Pause marquee on hover of the track wrapper */
-.marquee-track:hover .marquee-anim {
-  animation-play-state: paused;
-}
-
 @media (prefers-reduced-motion: reduce) {
   .marquee-anim {
     animation: none !important;

@@ -16,12 +16,6 @@ export function Clients() {
       <Reveal className="mt-14">
         <LogoMarquee />
       </Reveal>
-
-      <div className="container-tight mt-10 text-center">
-        <p className="text-sm text-muted-foreground">
-          Passe o cursor para destacar cada marca.
-        </p>
-      </div>
     </section>
   );
 }
