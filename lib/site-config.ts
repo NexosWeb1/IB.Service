@@ -121,10 +121,10 @@ export const services: Service[] = [
 ];
 
 export const differentials = [
-  "Mais de uma década de experiência industrial",
-  "Soluções abrangentes e flexíveis em Gestão da Qualidade",
-  "Equipes treinadas e atendimento próximo ao cliente",
-  "Agilidade na implantação e resposta rápida",
+  "Certificação ISO 9001:2015 — processos padronizados e rastreáveis",
+  "Única empresa em MG com galpão privado de 500 m² para seleção de itens",
+  "Equipe técnica para análise de não conformidades em 1º e 2º nível",
+  "Cobertura de faltas e férias sem custo adicional para o cliente",
 ];
 
 // Marcas exibidas na faixa de clientes. Os arquivos ficam em /public/logos.
